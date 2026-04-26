@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Content - Water Awareness Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-icon">💧</span>
+      <div>
+        <h1>Upload Content</h1>
+        <p>Share images, videos, or text stories from your gallery.</p>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="turnaround.html">Turn Around</a>
+      <a class="auth-link" href="login.html">Log in</a>
+    </nav>
+  </header>
+
+  <main class="landing-content">
+    <section class="section">
+      <div class="section-header">
+        <h3>Create a new post</h3>
+        <p>Upload a video, image, or write a short water awareness message that will appear on the Turn Around gallery.</p>
+      </div>
+
+      <form id="upload-form" class="upload-form">
+        <div class="form-group">
+          <label for="title">Post title</label>
+          <input id="title" name="title" type="text" placeholder="Give your post a title" />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description or story</label>
+          <textarea id="description" name="description" placeholder="Write what you want to share..." rows="6"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="media">Choose photo or video</label>
+          <input id="media" name="media" type="file" accept="image/*,video/*" />
+        </div>
+
+        <div class="upload-actions">
+          <button class="btn btn-primary" type="submit">Upload content</button>
+          <a class="btn btn-secondary" href="turnaround.html">View gallery</a>
+        </div>
+
+        <div id="upload-status" class="upload-status"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="upload.js"></script>
+</body>
+</html>

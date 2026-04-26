@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Water Awareness Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-icon">🔐</span>
+      <div>
+        <h1>Member sign in</h1>
+        <p>Access your account and join the community chat, uploads, and gallery.</p>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="landing-content">
+    <section class="landing-hero">
+      <div>
+        <h2>Login or create a new account</h2>
+        <p>Use your unique username and password to log in. Once signed in, your messages will show your username in the chat.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="chat-wrapper">
+        <div class="auth-tabs">
+          <button id="show-login" class="btn btn-secondary">Log in</button>
+          <button id="show-signup" class="btn btn-secondary">Sign up</button>
+        </div>
+
+        <form id="login-form" class="chat-form">
+          <div class="form-group">
+            <label for="login-username">Username</label>
+            <input id="login-username" name="username" type="text" placeholder="Enter your username" required />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" placeholder="Enter your password" required />
+          </div>
+          <div class="upload-actions">
+            <button class="btn btn-primary" type="submit">Log in</button>
+          </div>
+        </form>
+
+        <form id="signup-form" class="chat-form hidden">
+          <div class="form-group">
+            <label for="signup-username">Username</label>
+            <input id="signup-username" name="username" type="text" placeholder="Choose a unique username" required />
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input id="signup-password" name="password" type="password" placeholder="Create a password" required />
+          </div>
+          <div class="upload-actions">
+            <button class="btn btn-primary" type="submit">Sign up</button>
+          </div>
+        </form>
+
+        <p id="auth-status" class="chat-meta"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+  <script>
+    document.getElementById('show-login').addEventListener('click', () => {
+      document.getElementById('login-form').classList.remove('hidden');
+      document.getElementById('signup-form').classList.add('hidden');
+    });
+    document.getElementById('show-signup').addEventListener('click', () => {
+      document.getElementById('signup-form').classList.remove('hidden');
+      document.getElementById('login-form').classList.add('hidden');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Group Chat - Water Awareness Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-icon">💬</span>
+      <div>
+        <h1>Group Chat</h1>
+        <p>Talk with the community and share water-saving ideas instantly.</p>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="turnaround.html">Turn Around</a>
+      <a href="upload.html">Upload</a>
+      <a class="auth-link" href="login.html">Log in</a>
+    </nav>
+  </header>
+
+  <main class="landing-content" data-protected="true">
+    <section class="landing-hero">
+      <div>
+        <h2>Live group chat</h2>
+        <p>Everyone can see messages and reply instantly. Use this chat to coordinate water projects, ask questions, and support each other in the app.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h3>Chat room</h3>
+        <p>Messages are saved immediately and visible to everyone who opens this page.</p>
+      </div>
+
+      <div class="chat-wrapper">
+        <div>
+          <ul class="chat-list" id="chat-list"></ul>
+          <p id="chat-status" class="chat-meta"></p>
+        </div>
+
+        <div class="chat-meta">Logged in as <strong id="username-display"></strong></div>
+        <form id="chat-form" class="chat-form">
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Type your message here..." rows="4"></textarea>
+          </div>
+          <div class="upload-actions">
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="groupchat.js"></script>
+</body>
+</html>

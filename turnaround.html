@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turn Around - Water Awareness Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-icon">💧</span>
+      <div>
+        <h1>Turn Around</h1>
+        <p>Community gallery for water stories, photos, and videos.</p>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="upload.html">Upload</a>
+      <a class="auth-link" href="login.html">Log in</a>
+    </nav>
+  </header>
+
+  <main class="landing-content" data-protected="true">
+    <section class="landing-hero">
+      <div>
+        <h2>Turn Around Gallery</h2>
+        <p>See the latest uploads from the community, including photos, videos, and text stories. Everything posted here is saved permanently for everyone to view and share.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h3>Community uploads</h3>
+        <p>All public posts appear here. You can download files or remove your own uploads at any time.</p>
+      </div>
+      <div class="landing-grid" id="gallery"></div>
+      <div id="empty-state" class="upload-placeholder hidden">
+        <strong>No uploads yet</strong>
+        <p>The gallery will populate once someone uploads a photo, video, or text story from the Upload page.</p>
+        <a href="upload.html">Add a post</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="turnaround.js"></script>
+</body>
+</html>
