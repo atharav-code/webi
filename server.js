@@ -39,7 +39,14 @@ app.use(session({
   }
 }));
 app.use('/uploads', express.static(UPLOAD_DIR));
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname), {
+  maxAge: 0,
+  setHeaders: (res) => {
+    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    res.set('Pragma', 'no-cache');
+    res.set('Expires', '0');
+  }
+}));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
