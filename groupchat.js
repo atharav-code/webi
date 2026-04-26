@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatList = document.getElementById('chat-list');
   const chatForm = document.getElementById('chat-form');
   const status = document.getElementById('chat-status');
-  const apiPaths = ['/api/messages', 'http://127.0.0.1:3000/api/messages'];
+  const apiPaths = ['/api/messages'];
 
   function setStatus(message, isError = false) {
     status.textContent = message;

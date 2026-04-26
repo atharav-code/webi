@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const gallery = document.getElementById('gallery');
   const emptyState = document.getElementById('empty-state');
-  const apiPaths = ['/api/posts', 'http://127.0.0.1:3000/api/posts'];
+  const apiPaths = ['/api/posts'];
 
   function formatDate(dateString) {
     const date = new Date(dateString);

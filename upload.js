@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const status = document.getElementById('upload-status');
   const mediaInput = document.getElementById('media');
   const primaryEndpoint = '/api/upload';
-  const fallbackEndpoint = 'http://127.0.0.1:3000/api/upload';
 
   function setStatus(message, type = 'info') {
     status.textContent = message;
@@ -39,10 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setStatus('Uploading your post...');
 
     try {
-      let response = await sendForm(formData, primaryEndpoint);
-      if (!response.ok && window.location.origin !== 'http://127.0.0.1:3000') {
-        response = await sendForm(formData, fallbackEndpoint);
-      }
+      const response = await sendForm(formData, primaryEndpoint);
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => null);
@@ -55,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'turnaround.html';
       }, 1400);
     } catch (error) {
-      setStatus('Upload failed. Please use the server at http://127.0.0.1:3000 and refresh the page.', 'error');
+      setStatus('Upload failed. Please refresh the page and try again.', 'error');
     }
   });
 });

@@ -41,6 +41,10 @@ app.use(session({
 app.use('/uploads', express.static(UPLOAD_DIR));
 app.use(express.static(path.join(__dirname)));
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 async function readPosts() {
   try {
     const content = await fs.readFile(POSTS_FILE, 'utf8');
